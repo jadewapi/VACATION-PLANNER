@@ -1,0 +1,452 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #f0f4e4;
+}
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo {
+  background-color: #0070ba;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #f0f4e3;
+}
+
+.logoContainer {
+  margin: 1rem 0;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+.formContainer,
+.items,
+.status {
+  width: 90%;
+  margin: 0 auto;
+}
+
+form {
+  width: 100%;
+  background-color: #0070ba;
+  height: 10rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputContainer {
+  width: 50%;
+  display: flex;
+}
+
+label {
+  width: 50%;
+  color: #a9d9f5;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+select,
+input,
+button {
+  width: 20%;
+  height: 4rem;
+  background-color: #a9d9f5;
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #0070ba;
+}
+
+input {
+  width: 55%;
+}
+
+input::placeholder {
+  color: #0070ba;
+}
+
+button {
+  width: 20%;
+  background-color: #f9b73e;
+  color: #0070ba;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+  height: 40rem;
+  margin-top: 1rem;
+  background-color: #f9b73e;
+  border-radius: 20px;
+  padding: 2rem;
+  overflow-y: scroll;
+}
+
+.items > .itemContainer {
+  background-color: green;
+  border-radius: 20px;
+  padding: 0 2rem;
+  margin: 1rem 1rem;
+  font-size: 3rem;
+  height: fit-content;
+  color: #f0f4e4;
+}
+
+.status {
+  margin-top: 1rem;
+  height: 5rem;
+  background-color: #0070ba;
+  border-radius: 20px;
+  color: #a9d9f5;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 20px;
+  background-color: lightgray;
+}
+
+.progressBar {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height: 2rem;
+  margin: 0 auto;
+  background-color: #c6cab9;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fillIn {
+  position: absolute;
+  background-color: green;
+  height: 2rem;
+  width: 90%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.fillIn > p {
+  position: relative;
+  bottom: 6%;
+  color: #f0f4e3;
+}
+
+@media (width < 1089px) {
+  label {
+    font-size: 2rem;
+  }
+}
+
+@media (width < 724px) {
+  .status > p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (width < 862px) {
+  .formContainer,
+  .items,
+  .status,
+  .progressBar {
+    width: 95%;
+    margin: 0 auto;
+  }
+  label {
+    width: fit-content;
+    font-size: 3rem;
+  }
+  form {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    justify-content: space-evenly;
+  }
+  .inputContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .items,
+  .status,
+  .progressBar {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (width < 637px) {
+  .status > p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (width < 520px) {
+  .itemContainer > p {
+    font-size: 2rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #f0f4e4;
+}
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo {
+  background-color: #0070ba;
+  height: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #f0f4e3;
+}
+
+.logoContainer {
+  margin: 1rem 0;
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+.formContainer,
+.items,
+.status {
+  width: 90%;
+  margin: 0 auto;
+}
+
+form {
+  width: 100%;
+  background-color: #0070ba;
+  height: 10rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputContainer {
+  width: 50%;
+  display: flex;
+}
+
+label {
+  width: 50%;
+  color: #a9d9f5;
+  font-weight: 800;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+select,
+input,
+button {
+  width: 20%;
+  height: 4rem;
+  background-color: #a9d9f5;
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #0070ba;
+}
+
+input {
+  width: 55%;
+}
+
+input::placeholder {
+  color: #0070ba;
+}
+
+button {
+  width: 20%;
+  background-color: #f9b73e;
+  color: #0070ba;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+  height: 40rem;
+  margin-top: 1rem;
+  background-color: #f9b73e;
+  border-radius: 20px;
+  padding: 2rem;
+  overflow-y: scroll;
+}
+
+.items > .itemContainer {
+  background-color: green;
+  border-radius: 20px;
+  padding: 0 2rem;
+  margin: 1rem 1rem;
+  font-size: 3rem;
+  height: fit-content;
+  color: #f0f4e4;
+}
+
+.status {
+  margin-top: 1rem;
+  height: 5rem;
+  background-color: #0070ba;
+  border-radius: 20px;
+  color: #a9d9f5;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 20px;
+  background-color: lightgray;
+}
+
+.progressBar {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  height: 2rem;
+  margin: 0 auto;
+  background-color: #c6cab9;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fillIn {
+  position: absolute;
+  background-color: green;
+  height: 2rem;
+  width: 90%;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.fillIn > p {
+  position: relative;
+  bottom: 6%;
+  color: #f0f4e3;
+}
+
+@media (width < 1089px) {
+  label {
+    font-size: 2rem;
+  }
+}
+
+@media (width < 724px) {
+  .status > p {
+    font-size: 1.75rem;
+  }
+}
+
+@media (width < 862px) {
+  .formContainer,
+  .items,
+  .status,
+  .progressBar {
+    width: 95%;
+    margin: 0 auto;
+  }
+  label {
+    width: fit-content;
+    font-size: 3rem;
+  }
+  form {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    justify-content: space-evenly;
+  }
+  .inputContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .items,
+  .status,
+  .progressBar {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (width < 637px) {
+  .status > p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (width < 520px) {
+  .itemContainer > p {
+    font-size: 2rem;
+  }
+}
