@@ -28,7 +28,9 @@ export default function Form({ setAllItems }) {
           <div className="inputContainer">
             <select
               value={itemAmount}
-              onChange={(e) => setItemAmount(e.target.value)}
+              onChange={(e) => {
+                setItemAmount(e.target.value);
+              }}
             >
               {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
                 <option value={num} key={num}>
@@ -40,7 +42,7 @@ export default function Form({ setAllItems }) {
               type="text"
               placeholder="item name"
               value={itemDescription}
-              onChange={(e) => setItemDescription(e.target.value)}
+              onChange={(e) => setItemDescription(e.target.value.toLowerCase())}
             />
             <button>add</button>
           </div>

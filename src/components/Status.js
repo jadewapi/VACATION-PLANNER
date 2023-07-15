@@ -1,7 +1,10 @@
-export default function Status() {
+export default function Status({ allItems, packedItemsAmount }) {
   return (
     <div className="status">
-      <p>You have X items on the list, and you have packed X items so far.</p>
+      <p>
+        You have {allItems.length} items on the list, and you have packed{" "}
+        {packedItemsAmount} items so far.
+      </p>
     </div>
   );
 }

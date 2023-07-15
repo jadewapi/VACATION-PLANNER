@@ -124,6 +124,20 @@ button {
   color: #f0f4e4;
 }
 
+.itemContainer {
+  background-color: red;
+}
+
+.unpacked {
+  background-color: red;
+  transition: background-color 0.3s ease-out;
+}
+
+.packed {
+  background-color: green;
+  transition: background-color 0.3s ease-out;
+}
+
 .status {
   margin-top: 1rem;
   height: 5rem;
@@ -163,6 +177,7 @@ button {
   border-radius: 20px;
   text-align: center;
   font-size: 1.5rem;
+  transition: all 0.5s ease;
 }
 
 .fillIn > p {
@@ -395,6 +410,21 @@ button {
   position: relative;
   bottom: 6%;
   color: #f0f4e3;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  gap: 2rem;
+}
+
+svg {
+  fill: #f0f4e4;
+}
+
+svg:hover {
+  fill: #c1c5b6;
 }
 
 @media (width < 1089px) {

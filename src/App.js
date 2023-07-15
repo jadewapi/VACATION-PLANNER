@@ -7,14 +7,17 @@ import { useState } from "react";
 
 export default function App() {
   const [allItems, setAllItems] = useState([]);
+  const packedItemsAmount = allItems.filter(
+    (obj) => obj.packed === true
+  ).length;
   console.log(allItems);
   return (
     <>
       <Logo />
       <Form setAllItems={setAllItems} />
-      <Items allItems={allItems} />
-      <Status />
-      <ProgressBar />
+      <Items allItems={allItems} setAllItems={setAllItems} />
+      <Status allItems={allItems} packedItemsAmount={packedItemsAmount} />
+      <ProgressBar allItems={allItems} packedItemsAmount={packedItemsAmount} />
     </>
   );
 }
