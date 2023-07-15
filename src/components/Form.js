@@ -1,6 +1,9 @@
 import { useState } from "react";
 
-export default function Form() {
+export default function Form({ setAllItems }) {
+  const [itemDescription, setItemDescription] = useState("");
+  const [itemAmount, setItemAmount] = useState(1);
+
   function formSubmit(e) {
     e.preventDefault();
 
@@ -12,14 +15,10 @@ export default function Form() {
       packed: false,
       id: Date.now(),
     };
-    console.log(newItem);
     setItemAmount(1);
     setItemDescription("");
     setAllItems((prevArray) => [...prevArray, newItem]);
   }
-  const [itemDescription, setItemDescription] = useState("");
-  const [itemAmount, setItemAmount] = useState(1);
-  const [allItems, setAllItems] = useState([]);
 
   return (
     <>

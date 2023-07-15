@@ -1,8 +1,11 @@
-import Item from "./components/Item";
-export default function Items() {
+export default function Items({ allItems }) {
   return (
     <div className="items">
-      <Item />
+      <div className="itemContainer">
+        <p>
+          <span>2</span> passports
+        </p>
+      </div>
     </div>
   );
 }
